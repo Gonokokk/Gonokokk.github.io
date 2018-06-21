@@ -1,54 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Final game</title>
-	<link rel="stylesheet" href="css/style.css">
-	<meta charset="utf-8">
+	<title>Start game</title>
+	<link rel="stylesheet" href="css/styleLand.css">
 </head>
 <body>
 	<div class="wrapper">
-
-	<!--Canvas  -->
-		<canvas id="screen" height="600" width="980"></canvas>
-
-	<!--Modal window  -->
-		<div id="modal" class="modalWindow" hidden>
-			<div class="mpopup-content">
-				<div class="magic" id="start">
-					<div class="btn_magic"><span>Sun strike</span></div>
-					<div class="btn_magic"><span>Lightning</span></div>
-					<div class="btn_magic"><span>Bubbles of death</span></div>
-					<div class="btn_magic"><span>Great damage</span></div>
-					<div class="btn_magic"><span>Soul of death</span></div>
-					<div class="btn_magic"><span>Green circle</span></div>
-				</div>
+		<!--Landing page  -->
+		<div class="first">
+			<img src="./images/0.png" alt="pic">
+			<div class="rules">
+				<h2>Rules game</h2>
+				<p>You have to win monster. In game will be appear windows with different tasks. If you solve these tasks, you can hit monster. In other case, monster will beat you.</p>
+				<a href="index.html">Play game</a>
 			</div>
-			<!-- <input type="text" id="result"> -->
+			<form>
+				<input type="text" placeholder="Enter your name">
+				<input type="email" placeholder="Enter your E-mail">
+			</form>
 		</div>
-
-		<!-- Field of task 1 -->
-		<div id="field_task1" class="task1" hidden>
-			<p>You need to enter correct result</p>
-			<div class="expression"></div>
-			<input type="text" id="result1">
-			<input type="button" id="result1_btn" value="ok">
+		<div class="second">
+			<img src="./images/1.png" alt="pic">
+			<h1>Game</h1>
 		</div>
-
-		<!-- Field of task 2 -->
-		<div id="field_task2" class="task2" hidden>
-			<p>You need to enter correct translation</p>
-			<div class="word"></div>
-			<input type="text" id="result2">
-			<input type="button" id="result2_btn" value="ok">
+		<div class="third">
+			<img src="./images/2.png" alt="pic">
 		</div>
-
-		<!-- Congratulations -->
-		<div>
-			<img src="./images/congratulations.jpg" alt="congr" class="congr" id="congratulations" hidden>
-			<img src="./images/lose.png" alt="lose" class="lose" id="lose" hidden>
+		<div class="fourth">
+			<img src="./images/3.png" alt="pic">
 		</div>
 	</div>
-	
-	<script type="text/javascript" src="build/bundle.js"></script>
 </body>
 </html>
