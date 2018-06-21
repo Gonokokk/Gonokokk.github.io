@@ -1,0 +1,80 @@
+@font-face {
+    font-family: alfreddrake; 
+    src: url(../fonts/alfreddrake.ttf);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	max-width: 980px;
+}
+
+.first {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.first h2 {
+	color: #fff;
+	font-family: alfreddrake;
+	margin-bottom: -10px;
+}
+
+.first p {
+	font-size: 1.2em;
+	color: #000;
+	border: 2px solid #000;
+	width: 80%;
+	font-weight: bold;
+	font-family: alfreddrake;
+}
+
+.rules {
+	position: absolute;
+	width: 60%;
+	margin-left: -110px;
+}
+
+.rules p {
+	margin-bottom: 120px;
+	margin-bottom: 10px;
+}
+
+.rules a {
+    margin-left: 365px;
+    color: #fff;
+    font-family: alfreddrake;
+}
+
+.first form {
+	position: absolute;
+	width: 20%;
+	margin-left: 310px;
+    margin-top: 25px;
+}
+
+.first form input {
+	margin-bottom: 10px;
+}
+
+.second, .third, .fourth {
+	margin-bottom: -5px;
+	margin-left: 15px;
+}
+
+.second h1 {
+	font-family: alfreddrake;
+	position: absolute;
+	top: 268px;
+    left: 292px;
+    font-size: 8em;
+    color: red;
+    text-transform: uppercase;
+}
