@@ -1,10 +1,34 @@
-import SpriteSheet from './SpriteSheet.js';
+import  SpriteSheet from './SpriteSheet.js';
 import { loadImage } from './loaders.js';
+import { loadHeroes } from './loaders.js';
 import { createModal } from './modal.js';
 import { chooseTasks } from './choose_task.js';
 
 const canvas = document.querySelector('#screen');
 const context = canvas.getContext('2d');
+
+const canvas2 = document.querySelector('#screen2');
+const context2 = canvas2.getContext('2d');
+
+const hero1 = loadHeroes('./images/hero.png', 190, 250, 4);
+const hero2 = loadHeroes('./images/monster.png', 200, 250, 4);
+
+setInterval(() => {
+    context2.clearRect(110, 340, 190, 250);
+    drawImage(hero1, 100, 320, 190, 250);
+}, 200);
+
+setInterval(() => {
+    context2.clearRect(650, 300, 200, 250);
+    drawImage(hero2, 650, 300, 190, 250);
+}, 200);
+
+function drawImage(img, x, y, width, height) {
+    if (!img.loaded) return;
+    if (img.num >= img.count) img.num = 1;
+    else img.num += 1;
+    context2.drawImage(img.dom, img.width*(img.num - 1), 0, img.width, img.height, x, y, width, height);
+}
 
 loadImage('./images/tile.jpg')
     .then((image) => {
@@ -22,20 +46,6 @@ loadImage('./images/tile.jpg')
                 sprites.drawTile('ground', context, x, y);
             }
         }
-    });
-
-loadImage('./images/hero.png')
-    .then((image) => {
-        const sprites = new SpriteSheet(image, 200, 250);
-        sprites.define('hero', 1, 1);
-        sprites.draw('hero', context, 0, 255);
-    });
-
-loadImage('./images/monster.png')
-    .then((image) => {
-        const sprites = new SpriteSheet(image, 200, 250);
-        sprites.define('hero', 1, 1);
-        sprites.draw('hero', context, 750, 235);
     })
     .then(setTimeout(createModal, 3000));
 

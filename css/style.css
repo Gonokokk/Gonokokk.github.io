@@ -22,16 +22,25 @@ body {
 	flex-direction: column;
 }
 
+#screen2 {
+    position: absolute;
+}
+
 .healthDiv {
     display: flex;
 }
 
-.myProgress1 {
+.myProgress1, .myProgress2 {
     position: relative;
     left: 55px;
     top: -560px;
     width: 35%;
-    margin-right: 200px;
+    border: 2px solid #000;
+    background-color: #00ff00;
+}
+
+.myProgress1 {
+    margin-right: 160px;
 }
 
 .myProgress2 {
@@ -174,7 +183,7 @@ body {
     animation: pulsing 4s;
     position: absolute;
     top: 150px;
-    left: 400px;
+    left: 350px;
 }
 
 /* add animation effects */
